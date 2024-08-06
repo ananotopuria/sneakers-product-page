@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Navigation from "./Navigation";
 import { BsCart3 } from "react-icons/bs";
 import avatarImg from "../../../assets/images/image-avatar.png";
 import { Link } from "react-router-dom";
+import Cart from "./../Cart";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
   return (
     <header className="flex justify-center">
       <div className="w-5/6 flex justify-between mt-[2rem]">
@@ -20,9 +23,10 @@ const Header = () => {
             />
           </svg>
         </Link>
-        <div className="md:order-3">
+        <button className="md:order-3" onClick={() => setCartIsOpen(!cartIsOpen)}>
           <BsCart3 />
-        </div>
+        </button>
+        {cartIsOpen && <Cart />}
         <div className="md:order-4">
           <img
             src={avatarImg}

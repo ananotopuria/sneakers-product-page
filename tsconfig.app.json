@@ -1,20 +1,3 @@
-// {
-//   "compilerOptions": {
-//     "jsx": "react",
-//     "target": "ES5",
-//     "module": "commonjs",
-//     "strict": true,
-//     "allowSyntheticDefaultImports": true,
-//     "moduleResolution": "node",
-//     "noEmit": true,
-//     "resolveJsonModule": true,
-//     "esModuleInterop": true,
-//     "skipLibCheck": true,
-//     "forceConsistentCasingInFileNames": true
-//   },
-//   "include": ["src"],
-//   "exclude": ["node_modules"]
-// }
 
 {
   "extends": "./tsconfig.json",
@@ -26,26 +9,17 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    /* Allow synthetic default imports */
     "allowSyntheticDefaultImports": true,
-
-    /* Allow importing TypeScript extensions */
-    // "allowImportingTsExtensions": true,
     "esModuleInterop": true
   },
   "include": ["src"]

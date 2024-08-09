@@ -4,6 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 import avatarImg from "../../../assets/images/image-avatar.png";
 import { Link } from "react-router-dom";
 import Cart from "./../Cart";
+import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +24,20 @@ const Header = () => {
             />
           </svg>
         </Link>
-        <button className="md:order-3" onClick={() => setCartIsOpen(!cartIsOpen)}>
-          <BsCart3 />
+        <button className="md:order-3">
+          <CiSearch />
         </button>
-        {cartIsOpen && <Cart />}
+        {cartIsOpen && (
+          <Cart
+            cartItems={[]}
+            onRemove={function (index: number): void {
+              throw new Error("Function not implemented.");
+            }}
+            onClose={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        )}
         <div className="md:order-4">
           <img
             src={avatarImg}

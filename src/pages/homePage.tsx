@@ -4,6 +4,8 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import minus from "../assets/images/icon-minus.svg";
 import plus from "../assets/images/icon-plus.svg";
 import Lightbox from "../components/Layout/Lightbox";
+import Cart from "../components/Layout/Cart";
+import Header from "../components/Layout/Header";
 
 import image1 from "../assets/images/image-product-1.jpg";
 import thumbnail1 from "../assets/images/image-product-1-thumbnail.jpg";
@@ -49,6 +51,8 @@ const HomePage: React.FC = () => {
   const [amount, setAmount] = useState<number>(0);
   const [slideIndex, setSlideIndex] = useState<number>(1);
   const [showLightbox, setShowLightbox] = useState<boolean>(false);
+  const [cartItems, setCartItems] = useState<{ product: Product; quantity: number }[]>([]);
+  const [showCart, setShowCart] = useState<boolean>(false);
 
   const { mainImage } = products[value];
 
@@ -72,6 +76,18 @@ const HomePage: React.FC = () => {
     setAmount((prevAmount) => Math.max(prevAmount - 1, 0));
   };
 
+  const handleAddToCart = () => {
+    if (amount > 0) {
+      const newItem = { product: products[value], quantity: amount };
+      setCartItems((prevItems) => [...prevItems, newItem]);
+      setAmount(0);
+    }
+  };
+
+  const handleRemoveFromCart = (index: number) => {
+    setCartItems((prevItems) => prevItems.filter((_, i) => i !== index));
+  };
+
   return (
     <>
       {showLightbox && (
@@ -81,6 +97,13 @@ const HomePage: React.FC = () => {
           nextSlide={nextSlide}
           previousSlide={previousSlide}
           setShowLightbox={setShowLightbox}
+        />
+      )}
+      {showCart && (
+        <Cart
+          cartItems={cartItems}
+          onRemove={handleRemoveFromCart}
+          onClose={() => setShowCart(false)}
         />
       )}
       <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:place-items-center lg:py-20">
@@ -185,13 +208,23 @@ const HomePage: React.FC = () => {
             </ul>
 
             <div className="lg:flex-1">
-              <button className="flex items-center justify-center gap-4 bg-orange-500 py-2 px-4 text-white font-bold rounded-lg shadow mt-5 w-full lg:mt-0 hover:bg-orange-600 transition-all duration-200">
+              <button
+                className="flex items-center justify-center gap-4 bg-orange-500 py-2 px-4 text-white font-bold rounded-lg shadow mt-5 w-full lg:mt-0 hover:bg-orange-600 transition-all duration-200"
+                onClick={handleAddToCart}
+              >
                 <AiOutlineShoppingCart /> Add to cart
               </button>
             </div>
           </div>
         </article>
       </section>
+
+      <button
+        className="fixed bottom-8 right-8 bg-orange-500 p-3 rounded-full text-white shadow-lg"
+        onClick={() => setShowCart(!showCart)}
+      >
+        <AiOutlineShoppingCart />
+      </button>
     </>
   );
 };

@@ -14,5 +14,5 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   publicDir: 'public',
-  base: '/starter_project/',
+  base: '/gym-fitness/',
 });

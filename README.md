@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Sneakers Product Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a solution to the [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6) for building an E-commerce Product Page. The project is built using modern web technologies and aims to provide a responsive and interactive product page with features like image galleries, product selection, and a shopping cart.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This E-commerce Product Page is designed to offer a seamless user experience for browsing and purchasing a product. The page includes an image gallery with lightbox functionality, a quantity selector, and an "Add to Cart" feature.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
+- Responsive design for mobile and desktop views
+- Interactive image gallery with lightbox functionality
+- Quantity selector with validation
+- Add to cart functionality with real-time updates
+- Integration with a mock API for product data
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Technologies Used
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that adds static types to the language.
+- **Vite**: A fast build tool and development server for modern web projects.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **Sass**: A preprocessor scripting language that is interpreted or compiled into CSS.
+- **React Router**: A library for routing in React applications.
+- **Framer Motion**: A library for creating animations in React applications.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **ESLint**: A tool for identifying and fixing linting issues in JavaScript/TypeScript code.
+- **Prettier**: An opinionated code formatter.
+

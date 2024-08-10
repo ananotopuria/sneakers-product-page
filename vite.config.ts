@@ -5,5 +5,6 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   publicDir: 'public',
-  base: '/sneakers-product-page/starter_project',
+  // base: '/sneakers-product-page/starter_project',
+  base: '/sneakers-product-page/',
 });

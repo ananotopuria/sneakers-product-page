@@ -6,7 +6,7 @@ import Products from "./products";
 
 const router = createBrowserRouter([
   {
-    path: "/sneakers-product-page/starter_project",
+    path: "/sneakers-product-page",
     element: <Layout />,
     children: [
       {

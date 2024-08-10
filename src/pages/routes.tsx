@@ -6,11 +6,11 @@ import Products from "./products";
 
 const router = createBrowserRouter([
   {
-    path: "/starter_project",
+    path: "/sneakers-product-page/starter_project",
     element: <Layout />,
     children: [
       {
-        path: "/starter_project",
+        path: "",
         element: <HomePage />,
       },
       {

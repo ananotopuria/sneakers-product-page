@@ -1,5 +1,3 @@
-import React from "react";
-import thumbnail1 from "./../../../assets/images/image-product-1-thumbnail.jpg";
 import iconDelete from "./../../../assets/images/icon-delete.svg";
 
 interface CartItem {

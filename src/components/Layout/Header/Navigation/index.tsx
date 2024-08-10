@@ -32,7 +32,7 @@ const Navigation = () => {
             <ul className="navigation__list">
               <li className="navigation__item">
                 <Link
-                  to="/starter_project/products"
+                  to="/sneakers-product-page/starter_project/products"
                   className="navigation__link"
                   onClick={handleLinkClick}
                 >
@@ -41,7 +41,7 @@ const Navigation = () => {
               </li>
               <li className="navigation__item">
                 <Link
-                  to="/starter_project/"
+                  to="/sneakers-product-page/starter_project/"
                   className="navigation__link"
                   onClick={handleLinkClick}
                 >
@@ -50,7 +50,7 @@ const Navigation = () => {
               </li>
               <li className="navigation__item">
                 <Link
-                  to="/starter_project/"
+                  to="/sneakers-product-page/starter_project/" 
                   className="navigation__link"
                   onClick={handleLinkClick}
                 >
@@ -59,7 +59,7 @@ const Navigation = () => {
               </li>
               <li className="navigation__item">
                 <Link
-                  to="/starter_project/"
+                  to="/sneakers-product-page/starter_project/" 
                   className="navigation__link"
                   onClick={handleLinkClick}
                 >
@@ -68,7 +68,7 @@ const Navigation = () => {
               </li>
               <li>
                 <Link
-                  to="/starter_project/"
+                  to="/sneakers-product-page/starter_project/" 
                   className="navigation__link"
                   onClick={handleLinkClick}
                 >
@@ -82,19 +82,19 @@ const Navigation = () => {
       <nav className="header__nav">
         <ul className="flex gap-5 header__nav-list">
           <li>
-            <Link to="/starter_project/products">Collection</Link>
+            <Link to="/sneakers-product-page/starter_project/products">Collection</Link>
           </li>
           <li>
-            <Link to="/starter_project/">Men</Link>
+            <Link to="/sneakers-product-page/starter_project/">Men</Link>
           </li>
           <li>
-            <Link to="/starter_project/">Women</Link>
+            <Link to="/sneakers-product-page/starter_project/">Women</Link>
           </li>
           <li>
-            <Link to="/starter_project">About</Link>
+            <Link to="/sneakers-product-page/starter_project">About</Link>
           </li>
           <li>
-            <Link to="/starter_project">Contact</Link>
+            <Link to="/sneakers-product-page/starter_project">Contact</Link>
           </li>
         </ul>
       </nav>
